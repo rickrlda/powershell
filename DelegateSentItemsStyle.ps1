@@ -1,17 +1,17 @@
-﻿<#
-.SYNOPSIS
-    Adiciona chave de registro Outlook
-
-
-    .DESCRIPTION
-    Este script tem com finalidade adicionar a chave de regsitro DelegateSentItemsStyle para usuários que tem permissão de SnedAs e 
-    utilizam caixa compartilhada e enviam mensagem atraves dela.
-    Script desenvolvido para uso exclusivo do Tribunal de Justiça de SP.
-    
-    
-    Version 1.0, 11 de Março, 2019
-    Autor: Ricardo Azevedo
-
+#﻿<#
+#.SYNOPSIS
+#    Adiciona chave de registro Outlook
+#
+#
+#    .DESCRIPTION
+#    Este script tem com finalidade adicionar a chave de regsitro DelegateSentItemsStyle para usuários que tem permissão de SnedAs e 
+#    utilizam caixa compartilhada e enviam mensagem atraves dela.
+#    Script desenvolvido para uso exclusivo do Tribunal de Justiça de SP.
+#    
+#    
+#    Version 1.0, 11 de Março, 2019
+#    Autor: Ricardo Azevedo
+#
 #>
 
 [void][System.Reflection.Assembly]::LoadWithPartialName('Microsoft.VisualBasic')

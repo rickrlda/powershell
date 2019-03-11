@@ -1,5 +1,5 @@
-#
-#<.SYNOPSIS
+#<#
+#.SYNOPSIS
 #    Adiciona Permissão de FullAccess
 #
 #

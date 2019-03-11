@@ -1,4 +1,4 @@
-#﻿<#
+#<#
 #.SYNOPSIS
 #    Adiciona chave de registro Outlook
 #

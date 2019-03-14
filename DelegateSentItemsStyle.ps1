@@ -12,6 +12,7 @@
 #    Version Created: 1.0, 11 de Março, 2019
 #    Version Updated (IF and ELSEIF): 1.1, 14 de Março, 2019
 #    Autor: Ricardo Azevedo
+#    KB Microsoft: https://support.microsoft.com/en-us/help/2843677/messages-sent-from-a-shared-mailbox-aren-t-saved-to-the-sent-items-fol
 #
 #>
 

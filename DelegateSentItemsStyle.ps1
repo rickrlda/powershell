@@ -14,6 +14,9 @@
 #    Autor: Ricardo Azevedo
 #    KB Microsoft: https://support.microsoft.com/en-us/help/2843677/messages-sent-from-a-shared-mailbox-aren-t-saved-to-the-sent-items-fol
 #
+#   $ScriptFromGithHub = Invoke-WebRequest https://raw.githubusercontent.com/tomarbuthnot/Run-PowerShell-Directly-From-GitHub/master/Run-FromGitHub-SamplePowerShell.ps1
+#   Invoke-Expression $($ScriptFromGithHub.Content)
+#
 #>
 
 $OfficeVersion = Read-Host ("Digite a versão do Microsoft Office instalada nesse equipamento. 

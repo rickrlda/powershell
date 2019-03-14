@@ -9,7 +9,8 @@
 #    Script desenvolvido para uso exclusivo do Tribunal de Justiça de SP.
 #    
 #    
-#    Version 1.0, 11 de Março, 2019
+#    Version Created: 1.0, 11 de Março, 2019
+#    Version Updated (IF and ELSEIF): 1.1, 14 de Março, 2019
 #    Autor: Ricardo Azevedo
 #
 #>

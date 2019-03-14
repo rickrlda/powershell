@@ -21,13 +21,14 @@ $OfficeVersion = [Microsoft.VisualBasic.Interaction]::InputBox("Digite a versão
 $registryPath = "HKCU:\Software\Microsoft\Office\$OfficeVersion\Outlook\Preferences"
 $Name = "DelegateSentItemsStyle"
 $value = "1"
-IF ((Test-Path $registryPath) -eq $false)
-    {
-    Write-Host "Não foi possível localizar o caminho $registryPath porque ele não existe, por favor verifique se a versão que foi digitada do Microsoft Office corresponde com a versão instalada neste computador"
-}
-ELSEIF ((Test-Path $registryPath) -eq $true)
+
+IF ((Test-Path $registryPath) -eq $true)
     {
     New-ItemProperty -Path $registryPath -Name $name -Value $value `
     -PropertyType DWORD -Force | Out-Null
-    Write-Host "Chave de registro criada com sucesso"
+    Write-Host "Chave de registro criada com sucesso!" -ForegroundColor green
+}
+ELSE {
+    Write-Host "P.S.:" -ForegroundColor yellow -BackgroundColor black -NoNewline
+    Write-Host " Não foi possível localizar o caminho $registryPath porque ele não existe, por favor verifique se a versão que foi informada do Microsoft Office corresponde com a versão instalada neste computador." -ForegroundColor red -BackgroundColor black
 }

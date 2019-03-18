@@ -1,18 +1,19 @@
-﻿<#
-.SYNOPSIS
-    Verifica se o usuário possui permissão FullAcces & SendAs, caso negativo adiciona.
-
-
-    .DESCRIPTION
-    Este script tem como finalidade verificar se o usuário tem permissão na caixa de correio compartilhada, 
-    caso negativo ele adiciona a permissão de FullAccess e SendAs 
-    para os usuários que utilizam a caixa compartilhada.
-    Script desenvolvido para uso exclusivo do Tribunal de Justiça de SP.
-    
-    
-    Version 1.0, 18 de Março, 2019
-    Autor: Ricardo Azevedo
-
+#<#
+#.SYNOPSIS
+#    Verifica se o usuário possui permissão FullAcces & SendAs, caso negativo adiciona.
+#
+#
+#    .DESCRIPTION
+#    Este script tem como finalidade verificar se o usuário tem permissão na caixa de correio compartilhada, 
+#    caso negativo ele adiciona a permissão de FullAccess e SendAs 
+#    para os usuários que utilizam a caixa compartilhada.
+#    Script desenvolvido para uso exclusivo do Tribunal de Justiça de SP.
+#    
+#    
+#   Version 1.0, 18 de Março, 2019
+#   Autor: Ricardo Azevedo
+#   $ScriptFromGithHub = Invoke-WebRequest https://raw.githubusercontent.com/rickrlda/powershell/O365/ValidatePermission.ps1
+#   Invoke-Expression $($ScriptFromGithHub.Content
 #>
 
 $Identity = Read-Host "Digite o alias, email ou Displayname da Caixa Compartilhada"

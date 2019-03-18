@@ -11,6 +11,7 @@
 #    
 #       Obs: Deve-se ser criado um arquivo com a extensão .csv no seguinte caminho do Windows C:\Temp\O365
 #       a primeira linha deve conter um nome chamado Alias
+#       Para executar esse script você também precisa estar conectado no PowerShell do Exchange Online.
 #    
 #    Version 1.0, 18 de Março, 2019
 #    Autor: Ricardo Azevedo

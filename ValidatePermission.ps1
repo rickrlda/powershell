@@ -19,12 +19,22 @@
 $Identity = Read-Host "Digite o alias, email ou Displayname da Caixa Compartilhada"
 $User = Read-Host "Digite o alias, email ou DisplayName do Usuário"
 
-if ((Get-MailboxPermission -Identity $identity -User $User) -eq $null){
+if ((Get-MailboxPermission -Identity $identity -User $User) -eq $null -and (Get-RecipientPermission -Identity $identity -Trustee $User) -eq $null){
     
    Add-MailboxPermission -Identity $identity -User $User -AccessRights FullAccess -AutoMapping $false | Out-Null
    Add-RecipientPermission -Identity $identity -Trustee $User -AccessRights SendAs -Confirm:$false | Out-Null
-   Write-Host "Permissão de FullAccess e SendAs adicionado para o usuário $User na Caixa Compartilhada: $identity" -ForegroundColor green
+   Write-Host "Permissão de FullAccess e SendAs foi adicionado para o usuário $User na Caixa Compartilhada: $identity" -ForegroundColor green
+}
+elseif ((Get-MailboxPermission -Identity $identity -User $User) -eq $null -and (Get-RecipientPermission -Identity $identity -Trustee $User) -ne $null){
+
+    Add-MailboxPermission -Identity $identity -User $User -AccessRights FullAccess -AutoMapping $false | Out-Null
+    Write-Host "O usuário $user já possui permissão de SendAs porém foi adicionado a permissão de FullAccess na Caixa Compartilhada: $identity" -ForegroundColor green
+}
+elseif ((Get-MailboxPermission -Identity $identity -User $User) -ne $null -and (Get-RecipientPermission -Identity $identity -Trustee $User) -eq $null){
+
+    Add-RecipientPermission -Identity $identity -Trustee $User -AccessRights SendAs -Confirm:$false | Out-Null
+    Write-Host "O usuário $user já possui permissão de FullAccess porém foi adicionado a permissão de SendAs na Caixa Compartilhada: $identity" -ForegroundColor green
 }
 else {
-    Write-Host "O usuário $user já possui permissão na Caixa Compartilhada $identity" -ForegroundColor yellow
+    Write-Host "O usuário $user já possui permissão tanto de FullAccess quanto de SendAs na Caixa Compartilhada: $identity" -ForegroundColor yellow
 }

@@ -14,7 +14,7 @@
 #    
 #    Version 1.0, 18 de Março, 2019
 #    Autor: Ricardo Azevedo
-#   $ScriptFromGithHub = Invoke-WebRequest https://raw.githubusercontent.com/rickrlda/powershell/O365/ValidatePermission.ps1
+#   $ScriptFromGithHub = Invoke-WebRequest https://raw.githubusercontent.com/rickrlda/powershell/O365/PermissaoBulk.ps1
 #   Invoke-Expression $($ScriptFromGithHub.Content
 #>
 

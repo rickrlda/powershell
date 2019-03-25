@@ -27,14 +27,21 @@ Digite aqui a versão")
 $registryPath = "HKCU:\Software\Microsoft\Office\$OfficeVersion\Outlook\Preferences"
 $Name = "DelegateSentItemsStyle"
 $value = "1"
+$registryPath1 = "HKCU:\Software\Microsoft\Office\$OfficeVersion\Outlook\Options\General"
+$Name1 = "DelegateWastebasketStyle"
+$value1 = "4"
+
 IF ((Test-Path $registryPath) -eq $true)
     {
     New-ItemProperty -Path $registryPath -Name $name -Value $value `
     -PropertyType DWORD -Force | Out-Null
-    Write-Host "Chave de registro criada com sucesso!!!" -ForegroundColor green
+    Write-Host "Chave de registro criada com sucesso!" -ForegroundColor green
+    New-ItemProperty -Path $registryPath1 -Name $name1 -Value $value1 `
+    -PropertyType DWORD -Force | Out-Null
+    Write-Host "Chave de registro $($Name1) criada com sucesso!" -ForegroundColor green
 }
 ELSE {
     Write-Host "P.S.:" -ForegroundColor yellow -BackgroundColor black -NoNewline
-    Write-Host (" Não foi possível localizar o caminho $registryPath porque ele não existe," +
+    Write-Host (" Não foi possível localizar o caminho $registryPath & $registryPath1 porque ele não existe," +
         " por favor verifique se a versão que foi informada do Microsoft Office corresponde com a versão instalada neste computador.") -ForegroundColor red -BackgroundColor black
 }

@@ -38,7 +38,7 @@ IF ((Test-Path $registryPath) -eq $true)
     {
     New-ItemProperty -Path $registryPath -Name $name -Value $value `
     -PropertyType DWORD -Force | Out-Null
-    Write-Host "Chave de registro criada com sucesso!" -ForegroundColor green
+    Write-Host "Chave de registro $($Name) criada com sucesso!" -ForegroundColor green
     New-ItemProperty -Path $registryPath1 -Name $name1 -Value $value1 `
     -PropertyType DWORD -Force | Out-Null
     Write-Host "Chave de registro $($Name1) criada com sucesso!" -ForegroundColor green

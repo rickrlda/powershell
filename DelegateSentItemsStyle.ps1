@@ -9,9 +9,11 @@
 #    Script desenvolvido para uso exclusivo do Tribunal de Justiça de SP.
 #    
 #    
-#    Version Created: 1.0, 11 de Março, 2019
-#    Version Updated (IF and ELSEIF): 1.1, 14 de Março, 2019
+#    Version Created: 1.0, 11th of Mach, 2019
+#    Version Updated (IF and ELSEIF): 1.1, 14th of March, 2019
+#    Version Updated configure (DelegateWastebasketStyle): 1.2, 25th of March, 2019
 #    Autor: Ricardo Azevedo
+#
 #    KB Microsoft 2843677: https://support.microsoft.com/en-us/help/2843677/messages-sent-from-a-shared-mailbox-aren-t-saved-to-the-sent-items-fol
 #    KB Microsoft 202517: https://support.microsoft.com/en-us/help/202517/items-that-are-deleted-from-a-shared-mailbox-go-to-the-wrong-folder-in
 #

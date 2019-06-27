@@ -34,7 +34,7 @@ if($x -eq 1){
         if($AdminCred -eq $null){
 
     Write-Host "Entre com as credenciais"
-    $AdminCred = Get-Credential -Message "Digite os dados da conta do usuário com permissão de Exchange Organization Manegement"
+    $AdminCred = Get-Credential -Message "Digite os dados da conta do usuário com permissão de Exchange Organization Management"
     }
                 
     $Identity = Read-Host "Digite o endereço email do usuário"
@@ -48,7 +48,7 @@ elseif($x -eq 2){
         if($AdminCred -eq $null){
 
     Write-Host "Entre com as credenciais"
-    $AdminCred = Get-Credential -Message "Digite os dados da conta do usuário com permissão de Exchange Organization Manegement"
+    $AdminCred = Get-Credential -Message "Digite os dados da conta do usuário com permissão de Exchange Organization Management"
     }
     
     $Identity = Read-Host "Digite o endereço email do usuário"

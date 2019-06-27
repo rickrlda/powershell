@@ -1,4 +1,4 @@
-﻿#<
+﻿#
 #.SYNOPSIS
 #    Migra caixa de e-mails to/from Exchange Online.
 #
@@ -14,7 +14,7 @@
 #    .GihtHubUrl
 #   $ScriptFromGithHub = Invoke-WebRequest https://raw.githubusercontent.com/rickrlda/powershell/O365/MoveRequest.ps1
 #   Invoke-Expression $($ScriptFromGithHub.Content
-#>
+#
 
 
 

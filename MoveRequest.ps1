@@ -1,4 +1,4 @@
-﻿#<#
+#<#
 #.SYNOPSIS
 #    Migra caixa de e-mails to/from Exchange Online.
 #

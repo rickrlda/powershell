@@ -13,7 +13,7 @@
 #
 #    .GihtHubUrl
 #   $ScriptFromGithHub = Invoke-WebRequest https://raw.githubusercontent.com/rickrlda/powershell/O365/MoveRequest.ps1
-#   Invoke-Expression $($ScriptFromGithHub.Content
+#   Invoke-Expression $($ScriptFromGithHub.Content)
 #>
 
 
@@ -39,7 +39,7 @@ if($x -eq 1){
                 
     $Identity = Read-Host "Digite o endereço email do usuário"
     Write-host "Movendo a caixa do usuário $Identity para o Office 365..."
-    #New-MoveRequest -Remote -Identity $Identity -RemoteHostName 'webmail.grupoccr.com.br' -RemoteCredential $AdminCred -TargetDeliveryDomain 'grupoccr.mail.onmicrosoft.com' -BadItemLimit 100 -LargeItemLimit 100
+    New-MoveRequest -Remote -Identity $Identity -RemoteHostName 'webmail.grupoccr.com.br' -RemoteCredential $AdminCred -TargetDeliveryDomain 'grupoccr.mail.onmicrosoft.com' -BadItemLimit 100 -LargeItemLimit 100
     Write-host "Para acompanhar o andamento da migração, utilize o seguinte cmdlet: Get-MoveRequestStatistics -Identity $Identity"
 
 }
@@ -54,7 +54,7 @@ elseif($x -eq 2){
     $Identity = Read-Host "Digite o endereço email do usuário"
     $DB = Read-Host "Por favor digite o nome do banco de dados do Exchange você deseja deixar a caixa do usuário"
     Write-host "Movendo a caixa do usuário $Identity para o Exchange On-Premises..."
-    #New-MoveRequest -OutBound -Identity $Identity -RemoteTargetDatabase $DB -RemoteHostName 'webmail.grupoccr.com.br' -RemoteCredential $AdminCred -TargetDeliveryDomain 'grupoccr.com.br'
+    New-MoveRequest -OutBound -Identity $Identity -RemoteTargetDatabase $DB -RemoteHostName 'webmail.grupoccr.com.br' -RemoteCredential $AdminCred -TargetDeliveryDomain 'grupoccr.com.br'
     Write-host "Para acompanhar o andamento da migração, utilize o seguinte cmdlet: Get-MoveRequestStatistics -Identity $Identity"
 }
 elseif($x -eq 3){

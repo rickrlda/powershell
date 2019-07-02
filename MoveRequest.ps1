@@ -39,7 +39,7 @@ if($x -eq 1){
                 
     $Identity = Read-Host "Digite o endereço email do usuário"
     Write-host "Movendo a caixa do usuário $Identity para o Office 365..."
-    New-MoveRequest -Remote -Identity $Identity -RemoteHostName 'webmail.grupoccr.com.br' -RemoteCredential $AdminCred -TargetDeliveryDomain 'grupoccr.mail.onmicrosoft.com' -BadItemLimit 100 -LargeItemLimit 100
+    New-MoveRequest -Remote -Identity $Identity -RemoteHostName 'webmail.grupoccr.com.br' -RemoteCredential $AdminCred -TargetDeliveryDomain 'grupoccr.mail.onmicrosoft.com' -BadItemLimit 100
     Write-host "Para acompanhar o andamento da migração, utilize o seguinte cmdlet: Get-MoveRequestStatistics -Identity $Identity"
 
 }
